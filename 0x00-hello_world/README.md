@@ -1,2 +1,1 @@
-#!/bin/bash
-Coding through ALX
+Learning to CODE in C programming through ALX
