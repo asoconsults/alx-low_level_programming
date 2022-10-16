@@ -11,6 +11,6 @@ int main(void)
 	{
 		putchar(lc);
 	}
-	putchart('\n');
+	putchar('\n');
 	return (0);
 }
