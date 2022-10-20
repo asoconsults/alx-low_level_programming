@@ -2,32 +2,32 @@
 /**
  * print_remaining_days - select a date
  * and prints how many is left
- * @mth: month in number order
- * @dy: day of month
- * @yer: year
+ * @month: month in number order
+ * @day: day of month
+ * @year: year
  * Return: void
  */
-void print_remaining_days(int mth, int dy, int yer)
+void print_remaining_days(int month, int day, int year)
 {
-	if ((yer % 400 == 0) || (yer % 4 == 0 && yer % 100 != 0))
+	if ((year % 100 == 0 && year % 400 == 0) || (year % 4 == 0))
 	{
-		if (mth >= 3 && dy >= 60)
+		if (month >= 2 && day >= 60)
 		{
-			dy++;
+			day++;
 		}
-		printf("dy of the yer: %d\n", dy);
-		printf("Remaining days: %d\n", 366 - dy);
+		printf("Day of the year: %d\n", day);
+		printf("Remaining days: %d\n", 366 - day);
 	}
 	else
 	{
-		if (mth == 2 && dy == 60)
+		if (month == 2 && day == 60)
 		{
-			printf("Invalid date: %02d/%02d/%04d\n", mth, dy - 31, yer);
+			printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
 		}
 		else
 		{
-			printf("Dy of the yer: %d\n", dy);
-			printf("Remaining days: %d\n", 366 - dy);
+			printf("Day of the yer: %d\n", day);
+			printf("Remaining days: %d\n", 366 - day);
 		}
 	}
 }
