@@ -9,7 +9,7 @@
  */
 void print_remaining_days(int mth, int dy, int yer)
 {
-	if ((yer % 400 == 0) || (yer % 4 == 0 && year % 100 != 0))
+	if ((yer % 400 == 0) || (yer % 4 == 0 && yer % 100 != 0))
 	{
 		if (mth >= 3 && dy >= 60)
 		{
@@ -26,7 +26,7 @@ void print_remaining_days(int mth, int dy, int yer)
 		}
 		else
 		{
-			printf("Dy of the yer: %d\n", day);
+			printf("Dy of the yer: %d\n", dy);
 			printf("Remaining days: %d\n", 366 - dy);
 		}
 	}
