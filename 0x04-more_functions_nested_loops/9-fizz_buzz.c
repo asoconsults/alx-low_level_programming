@@ -1,23 +1,25 @@
-#include <stdi0.h>
-/**
- * main - print fizzbuzz
- * Return: Always 0
- */
-int main(void)
-{
-	int n;
+#include "main.h"
+#include <stdio.h>
 
-	printf("1");
-	for (n = 2; n <= 100; n++)
+/**
+ * fizz_buzz -> printing to 100
+ */
+void fizz_buzz(void)
+{
+	int x;
+
+	for (x = 0; x <= 100; x++)
 	{
-		printf(" ");
-		if (n % 3 == 0)
-			printf("Fizz");
-		if (n % 5 == 0)
+		if (x == 100)
 			printf("Buzz");
-		if (n % 3 != 0 && n % 5 != 0)
-			printf("%d", n);
+		else if (x % 3 == 0 && x % 5 == 0)
+			printf("FizzBuzz ");
+		else if (x % 3 == 0)
+			printf("Fizz ");
+		else if (x % 5 == 0)
+			printf("Buzz ");
+		else
+			printf("%d ", x);
 	}
 	printf("\n");
-	return (0);
 }
