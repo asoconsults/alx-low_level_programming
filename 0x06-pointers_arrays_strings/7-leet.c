@@ -6,17 +6,17 @@
  */
 char *leet(char *n)
 {
-	int i, j;
+	int d, s;
 	char s1[] = "aAeEoOtTlL";
 	char s2[] = "4433007711";
 
-	for (i = 0; n[i] != '\0'; i++)
+	for (d = 0; n[d] != '\0'; d++)
 	{
-		for (j = 0; j < 10; j++)
+		for (s = 0; s < 10; s++)
 		{
-			if (n[i] == s1[j])
+			if (n[d] == s1[s])
 			{
-				n[i] = s2[j];
+				n[d] = s2[s];
 			}
 		}
 	}
